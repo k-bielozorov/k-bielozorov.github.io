@@ -1,7 +1,7 @@
 {
   "name": "my-react-project",
   "homepage": "https://k-bielozorov.github.io",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
