@@ -121,7 +121,7 @@
 .achievements {
   padding-bottom: 1rem;
   @media (min-width: 1110px) {
-    width: 500px;
+    width: 650px;
   }
 }
 

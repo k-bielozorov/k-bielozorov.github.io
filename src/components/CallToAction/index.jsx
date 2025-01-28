@@ -17,10 +17,11 @@ export default function CallToAction() {
   }, []);
 
   return (
-    <div>
+    <div className="print:hidden">
       {isScrolled ? (
         <div
           className="bg-[#e9b200] p-4 w-fit rounded-xl fixed bottom-8 right-8 cursor-pointer z-50 animate-bounce"
+          title="Back to top"
           onClick={() => window.scrollTo(0, 0)}
         >
           <svg

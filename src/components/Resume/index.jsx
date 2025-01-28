@@ -1,5 +1,6 @@
 // import { Hind } from "next/font/google";
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { dataInfo } from '../../info';
 import Job from '../Job';
 import Skill from '../Skill';
@@ -22,9 +23,9 @@ export default function Home() {
     <React.Fragment>
       <div
         id="resume"
-        className="pt-[250px] pb-[100px] lg:pb-[100px] min-h-screen"
+        className="pt-[250px] pb-[100px] lg:pb-[100px] min-h-screen print:scale-90 print:w-full print:max-w-none"
       >
-        <div className="container m-auto">
+        <div className="container m-auto print:scale-90 print:w-full print:max-w-none">
           <h1 className="relative font-extrabold text-5xl text-[#48AFDE] mb-20 -mt-20  md:px-24 px-5">
             My resume
           </h1>
@@ -163,6 +164,18 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
+              <div className="languages">
+                <h2 className="languages__title text-[#e9b200] py-2 font-bold md:text-xl">
+                  Languages
+                </h2>
+                <ul className="languages__list">
+                  {languages.map((language, index) => (
+                    <li key={index} className="languages__list-item">
+                      <Language {...language} />
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
             <div className="right-column">
               <div className="summary-right">
@@ -192,7 +205,7 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <div className="languages">
+                {/* <div className="languages">
                   <h2 className="languages__title text-[#e9b200] py-2 font-bold md:text-xl">
                     Languages
                   </h2>
@@ -202,32 +215,26 @@ export default function Home() {
                         <Language {...language} />
                       </li>
                     ))}
-                    {/* <li className="languages__list-item">
-                      Ukrainian – <span>native</span>
-                    </li>
-                    <li className="languages__list-item">
-                      English – <span>intermediate</span>
-                    </li> */}
                   </ul>
-                </div>
+                </div> */}
               </div>
             </div>
           </section>
 
-          <div className="px-5 md:px-24">
-            {/* <a
-              href="bielozorov.pdf"
-              download="qa-engineer-bielozorov.pdf"
-              className={`cursor-pointer inline-block bg-[#e9b200] transition-all duration-300 ease-in-out rounded-lg text-white py-3 px-5 font-bold mt-8 uppercase md:py-2 lg:py-3 lg:px-8 md:text-xs lg:text-base md:mt-5 xl:mt-10 hover:bg-[#47AEDE] hover:show-lg transform hover:translate-y-1 `}
+          <div className="px-5 md:px-24 flex justify-between">
+            <a
+              href="../download/qa-engineer-k.bielozorov.pdf"
+              download="qa-engineer-k.bielozorov.pdf"
+              className={`cursor-pointer inline-block bg-[#e9b200] transition-all duration-300 ease-in-out rounded-lg text-white py-3 px-5 font-bold mt-8 uppercase md:py-2 lg:py-3 lg:px-8 md:text-xs lg:text-base md:mt-5 xl:mt-10 hover:bg-[#47AEDE] hover:show-lg transform hover:translate-y-1 print:hidden`}
             >
               Download my resume
-            </a> */}
-            {/* <Link
-              to="/my-resume"
-              className={`cursor-pointer inline-block bg-[#e9b200] transition-all duration-300 ease-in-out rounded-lg text-white py-3 px-5 font-bold mt-8 uppercase md:py-2 lg:py-3 lg:px-8 md:text-xs lg:text-base md:mt-5 xl:mt-10 hover:bg-[#47AEDE] hover:show-lg transform hover:translate-y-1`}
+            </a>
+            <Link
+              to="/#home"
+              className={`cursor-pointer inline-block bg-[#47AEDE] transition-all duration-300 ease-in-out rounded-lg text-white py-3 px-5 font-bold mt-8 uppercase md:py-2 lg:py-3 lg:px-8 md:text-xs lg:text-base md:mt-5 xl:mt-10 hover:bg-[#e9b200] hover:show-lg transform hover:translate-y-1`}
             >
-              View my resume
-            </Link> */}
+              Back to home
+            </Link>
           </div>
         </div>
       </div>

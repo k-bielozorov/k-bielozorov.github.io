@@ -39,8 +39,8 @@ export default function Home() {
                   Experience
                 </a>
                 <a
-                  href="bielozorov.pdf"
-                  download="qa-engineer-bielozorov.pdf"
+                  href="/my-resume"
+                  // download="qa-engineer-bielozorov.pdf"
                   className={`ml-10 cursor-pointer inline-block bg-[#e9b200] transition-all duration-300 ease-in-out rounded-lg text-white py-3 px-5 font-bold mt-8 uppercase md:py-2 lg:py-3 lg:px-8 md:text-xs lg:text-base md:mt-5 xl:mt-10 hover:bg-[#47AEDE] hover:show-lg transform hover:translate-y-1 `}
                 >
                   My resume
@@ -51,7 +51,7 @@ export default function Home() {
           <div className="col-span-12 pt-[50px] md:bg-transparent bg-[#D9EEF7] md:pt-[130px] md:col-span-7">
             <div className="container m-auto">
               <img
-                src="/images/portfolio.png"
+                src="/images/portfolio.webp"
                 decoding="async"
                 alt="my profile foto"
               />

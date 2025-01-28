@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -100,7 +101,7 @@ export default function Header() {
         />
       </div>
       <header
-        className={`${isScrolled ? 'headerShow' : ''} w-full fixed top-0 z-50 transition-all duration-500`}
+        className={`${isScrolled ? 'headerShow' : ''} w-full fixed top-0 z-50 transition-all duration-500 print:hidden`}
       >
         <div className="sm:visible xl:invisible relative">
           <div

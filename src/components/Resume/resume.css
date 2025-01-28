@@ -245,3 +245,39 @@
 .languages__list-item span.language-level {
   color: #48afde;
 }
+
+@media print {
+  #resume {
+    padding: 0;
+    margin: -150px;
+  }
+
+  #resume .container > h1 {
+    display: none;
+  }
+
+  .container {
+    width: 1680px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .experience {
+    display: flex !important;
+    flex-direction: row !important;
+  }
+
+  .left-column {
+    width: 35% !important;
+    margin-right: 2rem;
+  }
+
+  .right-column {
+    width: 65% !important;
+  }
+
+  /* Ensure proper page breaks */
+  .experience__list-item {
+    break-inside: avoid;
+  }
+}
