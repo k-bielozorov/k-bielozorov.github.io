@@ -221,7 +221,7 @@ export default function Home() {
             </div>
           </section>
 
-          <div className="px-5 md:px-24 flex justify-between">
+          <div className="px-5 md:px-24 text-center flex flex-col sm:flex-row sm:justify-between">
             <a
               href="../download/qa-engineer-k.bielozorov.pdf"
               download="qa-engineer-k.bielozorov.pdf"
